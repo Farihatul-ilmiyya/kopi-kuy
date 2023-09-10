@@ -1,0 +1,109 @@
+@media (max-width: 991px) {
+  /*custom classes */
+  .text-content {
+    width: 100%;
+  }
+  .navbar-toggler-icon {
+    color: var(--black-color); /* Ubah warna sesuai kebutuhan */
+  }
+  /*navbar brand */
+  .navigation-wrap .navbar-logo img {
+    height: 3.8125rem;
+  }
+  .navigation-wrap {
+    text-align: center;
+    background-color: var(--white-color);
+  }
+  .navigation-wrap .nav-link {
+    line-height: 1.875rem;
+    color: var(--black-color);
+  }
+
+  /* Banner Design */
+  .top-banner {
+    padding: 9.375 0 9.375rem;
+  }
+  /* coursel design */
+
+  /*  */
+}
+@media (max-width: 767px) {
+  /* custem css */
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    line-height: 28px;
+  }
+  .chat svg {
+    width: 24px; /* Ubah ukuran sesuai kebutuhan */
+    height: 24px;
+  }
+  /* top banner */
+  .top-banner {
+    padding: 10.375rem 0 9.375rem;
+  }
+
+  /*carousel design*/
+}
+/*best seller */
+/* Desktop */
+@media (min-width: 992px) {
+  .best-seller .produk-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .best-seller .produk {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .best-seller .produk-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .best-seller .produk {
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 767px) {
+  .best-seller .produk-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  .best-seller .produk {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+  .about-section h2 {
+    font-size: 2rem; /* Atur ukuran font untuk layar berukuran medium */
+  }
+  .about-section p {
+    font-size: 1rem; /* Atur ukuran font untuk layar berukuran medium */
+  }
+}
+
+@media (max-width: 767px) {
+  #about {
+    padding-top: 3rem; /* Atur jarak atas untuk layar kecil */
+  }
+  .about-section h2 {
+    font-size: 1.5rem; /* Atur ukuran font untuk layar kecil */
+  }
+  .about-section p {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+}

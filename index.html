@@ -6,168 +6,300 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <title>Website Kopi Kuy</title>
+    <title>Website Kopi</title>
+    
+
+    <!--boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--feather icon-->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- own css -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive-style.css">
 </head>
 
-<body>
-    <nav>
-        <img class="logo" src="images/logo/logo_kuy.png">
-        <div class="navigasi">
-            <a href="#best-seller">Best Seller</a>
-            <a href="#our-team">Our Team</a>
-            <a href="#review">Review</a>
-            <a href="#contact-us">Contact Us</a>
-        </div>
-        <a class="shop" href="produk.html">Shop</a>
-        <a class="chat" href="https://wa.me/628123456?text=Saya ingin bertanya" target="_blank">Chat</a>
-    </nav>
-
-    <!-- Tulis Kode HTML / <header> Setelah baris di bawah ini (baris 28) -->
-
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100">
+    <!--header design-->
     <header>
-        <div class="kiri">
-            <h1>
-            Kopi Kuy <img src="images/icon/icon_kopi.svg" alt="">               
-            </h1>
-            <p> Kopi Kuy merupakan sebuah startup kopi retail yang ingin menyajikan high quality Coffee untuk para pelanggannya.</p>
-            <p>Dapat dibeli melalui</p>
-            <div class="olshop">
-                <img src="images/logo/logo_bukalapak.png" alt="">
-                <img src="images/logo/logo_shopee.png" alt="">
-                <img src="images/logo/logo_tokopedia.png" alt="">
+        <nav class="navbar navbar-expand-lg navigation-wrap">
+            <div class="container">
+              <a class="navbar-logo" href="#">
+                <img src="images/logo/pngegg2.png" class="img-fluid">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <!--<span class="navbar-toggler-icon"></span>-->
+                <i class="fas fa-stream navbar-toggler-icon"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#best-seller-section">Best Seller</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#our-team">Our Team</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#review">Review</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="produk.html"><i data-feather="shopping-cart"></i></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="chat" href="https://wa.me/628123456?text=Saya ingin bertanya" target="_blank">
+                        <div class="svg-wrapper-1">
+                          <div class="svg-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" data-feather="message-circle">
+                              <path fill="none" d="M0 0h24v24H0z"></path>
+                              <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                            </svg>
+                          </div>
+                        </div>
+                        <span>Chat</span>
+                      </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <!--section-1 top banner-->
+     <section id="home">
+        <div class="container-fluid px-0 top-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6">
+                        <h1><span>Kopi</span> </span><br>THE SOLUTION</h1>
+                        <h2>Mari Nikmati secangkir Kopi</h2>
+                        <p> Kami merupakan sebuah startup kopi retail yang ingin menyajikan high quality Coffee untuk para pelanggannya.</p>
+                        <p>Dapat dibeli melalui</p>
+                        <div class="olshop">
+                            <img src="images/logo/logo_bukalapak.png" alt="">
+                            <img src="images/logo/logo_shopee.png" alt="">
+                            <img src="images/logo/logo_tokopedia.png" alt="">
+                        </div>
+                        <div class="mt-4">
+                            <button class="main-btn">Order now <i class="fas fa-shopping basket ps-3"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-            <div class="kanan">
-                <img src="images/header/header1.png" alt="">
-            </div>
-    </header>
-    <section class="best-seller" id="best-seller">
+     </section>
+    <!--section-2 best seller-->
+    <section class="best-seller p-4" id="best-seller-section">
         <h2> Menu Andalan Kami</h2>
         <p>Best Seller:
         Nikmati menu andalan yang menjadi favorit customer Kami</p>
-        <div class="produk">
-            <img src="images/produk/product_capuchino.jpg" alt="">
-            <p>Cappuchino</p>
-        </div>
-        <div class="produk">
-            <img src="images/produk/product_espresso.jpg" alt="">
-            <p>Espresso</p>
-        </div>
-        <div class="produk">
-            <img src="images/produk/product_kopi_susu.jpg" alt="">
-            <p>Kopi Susu</p>
-        </div>
-        <div class="produk">
-            <img src=" images/produk/product_latte.jpg" alt="">
-            <p> Cafe Latte</p>
-        </div>
-    <section class="about-us" id="about-us">
-        <h2>Gak Ngopi Gak Kuy!</h2>
-        <p>Didirikan pada 2017, Kopi Kuy merupakan sebuah startup kopi retail 
-            yang ingin menyajikan kopi dengan kualitas tinggi untuk para pelanggannya. 
-            Nama Kuy yang diambil dari "yuk" yang merupakan harapan kami untuk mengajak semua 
-            yang terlibat dalam bisnis kami untuk bersama-sama menikmati sajian kopi yang berkualitas.</p>
-        <img src="images/about-us/aset_kopi_jumbo.png" alt="">
-        <p>Kopi yang kami jual, hanya dari petani terpilih, dan berkualitas tinggi diproses 
-            secara sempurna dan diteruskan oleh para barista handal, yang penuh semangat 
-            dalam menyiapkan segelas kebahagiaan spesial untuk anda</p>
-    </section>
-    <section class="our-team" id="our-team">
-        <h2>Our Team</h2>
-        <p>Kami berinvestasi dalam rasa - mulai dari pemilihan biji, metode pemanggangan, 
-            hingga barista dengan sertifikat internasional.</p>
-        <div class="team">
-            <img src="images/team/team1.jpg" alt="">
-            <h3>Riki Steven</h3>
-            <p>Founder Kopi Kuy</p>
-        </div>
-        <div class="team">
-            <img src="images/team/team2.jpg" alt="">
-            <h3>Andi Asraf</h3>
-            <p>Head of Marketing</p>
-        </div>
-        <div class="team">
-            <img src="images/team/team3.jpg" alt="">
-            <h3>Angelina Felly</h3>
-            <p>Barista</p>
-        </div>
-        <div class="team">
-            <img src="images/team/team4.jpg" alt="">
-            <h3>Sarah Chou</h3>
-            <p>Barista</p>
-        </div>
-    </section>
-    <section class="review" id="review">
-        <h2>Apa Kata Mereka</h2>
-        <p>Kami berikan fakta dan data, karena kepuasan konsumen selalu nomor 1 untuk kami.</p>
-        <div class="testimoni">
-            <img src="images/customer/customer1.jpg" alt="">
-            <div class="profile">
-                <h3>Benny Oktavian</h3>
-                <p>Mahasiswa </p>
+        <div class="produk-container">
+            <div class="produk">
+                <img src="images/produk/product_capuchino.jpg" alt="">
+                <h3>Cappuchino</h3>
+                <div class="price">Rp. 19.000<span>20.000</span></div>
+                <div class="mt-4">
+                    <button class="main-btn">Order now <i class="fas fa-shopping basket ps-3"></i></button>
+                </div>
+            </div> 
+
+            <div class="produk">
+                <img src="images/produk/product_espresso.jpg" alt="">
+                <h3>Espresso</h3>
+                <div class="price">Rp. 19.000<span>20.000</span></div>
+                <div class="mt-4">
+                    <button class="main-btn">Order now <i class="fas fa-shopping basket ps-3"></i></button>
+                </div>
             </div>
-            <p>"Perdana kesini langsung merasa cocok dari segi tempat dan rasa. 
-                Baristanya ramah dan pelayanannya maksimal, tidak sungkan bertanya keinginan pengunjung."</p>
+
+            <div class="produk">
+                <img src="images/produk/product_kopi_susu.jpg" alt="">
+                <h3>Kopi Susu</h3>
+                <div class="price">Rp. 19.000<span>20.000</span>
+                </div>
+                <div class="mt-4">
+                    <button class="main-btn">Order now <i class="fas fa-shopping basket ps-3"></i></button>
+                </div>
+            </div>  
+
+            <div class="produk">
+                <img src=" images/produk/product_latte.jpg" alt="">
+                <h3> Cafe Latte</h3>
+                <div class="price">Rp. 19.000<span>20.000</span></div>
+                <div class="mt-4">
+                    <button class="main-btn">Order now <i class="fas fa-shopping basket ps-3"></i></button>
+                </div>
+            </div>
         </div>
-        <div class="testimoni">
-            <img src="images/customer/customer2.jpg" alt="">
-            <div class="profile">
+    </section>
+    <!--section-3 about us-->
+    <section id="about">
+        <div class="about-section wrapper">
+            <div class="contaier">
+                <div class="row align-items-center">
+                    <div class="col-lg-7 col-md-12 mb-lg-0 mb-5">
+                        <div class="card border-0">
+                            <img src="images/about-us/yanapi-senaud-6HR8vpjYUHo-unsplash.jpg" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-12 text-sec">
+                        <h2>Gak Ngopi Gak Kuy!</h2>
+                        <p>Didirikan pada 2017, Kopi Kuy merupakan sebuah startup kopi retail 
+                            yang ingin menyajikan kopi dengan kualitas tinggi untuk para pelanggannya. 
+                            Nama Kuy yang diambil dari "yuk" yang merupakan harapan kami untuk mengajak semua 
+                            yang terlibat dalam bisnis kami untuk bersama-sama menikmati sajian kopi yang berkualitas.</p>
+                        <p>Kopi yang kami jual, hanya dari petani terpilih, dan berkualitas tinggi diproses 
+                            secara sempurna dan diteruskan oleh para barista handal, yang penuh semangat 
+                            dalam menyiapkan segelas kebahagiaan spesial untuk anda.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--section-4 our team-->
+    <section class="our-team" id="our-team">
+        <div class="container">
+            <h2>Our Team</h2>
+            <p>Kami berinvestasi dalam rasa - mulai dari pemilihan biji, metode pemanggangan, 
+                hingga barista dengan sertifikat internasional.</p>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="images/team/team1.jpg" class="card-img-top" alt="Riki Steven">
+                        <div class="card-body">
+                            <h3 class="card-title">Riki Steven</h3>
+                            <p class="card-text">Founder Kopi Kuy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="images/team/team2.jpg" class="card-img-top" alt="Andi Asraf">
+                        <div class="card-body">
+                            <h3 class="card-title">Andi Asraf</h3>
+                            <p class="card-text">Head of Marketing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="images/team/team3.jpg" class="card-img-top" alt="Angelina Felly">
+                        <div class="card-body">
+                            <h3 class="card-title">Angelina Felly</h3>
+                            <p class="card-text">Barista</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card">
+                        <img src="images/team/team4.jpg" class="card-img-top" alt="Sarah Chou">
+                        <div class="card-body">
+                            <h3 class="card-title">Sarah Chou</h3>
+                            <p class="card-text">Barista</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--section-5 review-->
+    <section class="review" id="review">
+        <div class="container">
+          <!-- Judul dan Paragraf -->
+          <h2>Apa Kata Mereka</h2>
+          <p>Kami berikan fakta dan data, karena kepuasan konsumen selalu nomor 1 untuk kami.</p>
+    <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#reviewCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="testimoni">
+              <img src="images/customer/customer1.jpg" alt="">
+              <div class="profile">
+                <h3>Benny Oktavian</h3>
+                <p>Mahasiswa</p>
+              </div>
+              <p>"Perdana kesini langsung merasa cocok dari segi tempat dan rasa. Baristanya ramah dan pelayanannya maksimal, tidak sungkan bertanya keinginan pengunjung."</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimoni">
+              <img src="images/customer/customer2.jpg" alt="">
+              <div class="profile">
                 <h3>Rena Oktaviana</h3>
                 <p>Karyawan Swasta</p>
+              </div>
+              <p>"Asik buat santai sm tmn2, tempatnya nyaman dan yg bikin seru banyak game2nya yg bs dimainkan bareng tmn2 atau saudara, menunya enak2, pokoknya recomend banget deh tempatnya wajib coba guys!!! Pelayanannya ramah banget 🤗."</p>
             </div>
-            <p>"Asik buat santai sm tmn2, tempatnya nyaman dan yg bikin seru banyak game2nya 
-                yg bs dimainkan bareng tmn2 atau saudara, menunya enak2, pokoknya recomend 
-                banget deh tempatnya wajib coba guys!!! Pelayanannya ramah banget 🤗."</p>
-        </div>
-        <div class="testimoni">
-            <img src="images/customer/customer3.jpg" alt="">
-            <div class="profile">
+          </div>
+          <div class="carousel-item">
+            <div class="testimoni">
+              <img src="images/customer/customer3.jpg" alt="">
+              <div class="profile">
                 <h3>Bagas Renaldo</h3>
                 <p>Dosen</p>
+              </div>
+              <p>"Tempat nya nyaman sekali pasti kalo kalian dateng betah ... selain tempat yang nyaman lalu pelayanan nya good banget... dan kalian yang datang ke kopi kuy jangan lewatkan permainan yang disediakan oleh kopi kuy , banyak banget game nya!"</p>
             </div>
-            <p>"Tempat nya nyaman sekali pasti kalo kalian dateng betah ... 
-                selain tempat yang nyaman lalu pelayanan nya good banget... 
-                dan kalian yang datang ke kopi kuy jangan lewatkan permainan yang disediakan 
-                oleh kopi kuy , banyak banget game nya!"</p>
+          </div>
         </div>
-    </section>
-    <section class="contact-us" id="contact-us">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7932.741866032694!2d106.668581!3d-6.214715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9912c7f297b%3A0xe5a3a671dae861ab!2sKopi%20kuy!5e0!3m2!1sid!2sid!4v1680617229460!5m2!1sid!2sid"
-    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <div class="kontak">
-            <img src="images/icon/icon_phone.png" alt="">
-            <p>Telp: +62 (812) 9046 5034</p>
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>  
+    <!--section-6 footer-->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>About Us</h3>
+                    <p>Kopi is a coffee shop dedicated to providing the best coffee experience. We focus on selecting the finest beans, perfecting the roasting process, and training baristas with international certifications.</p>
+                </div> 
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7932.741866032694!2d106.668581!3d-6.214715!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f9912c7f297b%3A0xe5a3a671dae861ab!2sKopi%20kuy!5e0!3m2!1sid!2sid!4v1680617229460!5m2!1sid!2sid"
+  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="col-md-3">
+                    <h3>Contact Info</h3>
+                   
+
+                    <address>
+                        <img src="images/icon/icon_location.png" alt="Location" class="mr-2">
+                        Jl. Coffee Street No. 123, Coffeeville
+                        <br>
+                        <img src="images/icon/icon_phone.png" alt="Phone" class="mr-2">
+                        Telp: +62 (812) 9046 5034
+                        <br>
+                        <img src="images/icon/icon_mail.png" alt="Email" class="mr-2">
+                        Email: hello@kopikuy.com
+                    </address>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2023 Kopi Kuy. All Rights Reserved</p>
+                </div>
+            </div>
         </div>
-        <div class="kontak">
-            <img src="images/icon/icon_mail.png" alt="">
-            <p>Email: hello@kopikuy.com</p>
-        </div>
-        <div class="kontak">
-            <img src="images/icon/icon_instagram.png" alt="">
-            <p>Instagram: @kopi.kuy</p>
-        </div>
-    </section>
-    <footer>
-        <div class="navigasi">
-            <a href="#BestSeller">Best Seller</a>
-            <a href="#OurTeam">Our Team</a>
-            <a href="#Review">Review</a>
-            <a href="#ContactUs">Contact Us</a>   
-        </div>
-        <p>Copyright kopi kuy: © 2023 Kopi Kuy. All Rights Reserved</p>
     </footer>
-</section>
-
-
-    <!--
-        Kode HTML tidak boleh lewat dari batas ini
-        Pastikan setiap section di tutup
-        misalnya kode <section class="best-seller"> harus ada
-        di bawah kode </header> (perhatikan ada garis miringnya
-        dan setiap section harus setelah kode </section>
-        jangan menulis <section> di dalam <section>
-    -->
+    <!-- JS Libraries-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- feather icon-->
+    <script>
+        feather.replace();
+      </script>
+    <!-- own js-->
+    <script src="js/main.js"></script>
 </body>
-
 </html>

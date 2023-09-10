@@ -1,563 +1,613 @@
-/* Kode * di bawah ini untuk mereset tampilan setiap web browser supaya seragam */
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap);
 
-* {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:active,
+:hover,
+:focus {
+  outline: 0 !important;
+  outline-offset: 0;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-color) !important;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/*  ===================== 
+    Variable Define 
+    =====================
+*/
+:root {
+  --primary-color: #ffc222;
+  --secondary-color: #00a149;
+  --white-color: #fff;
+  --text-color: #b0b0b0;
+  --black-color: #1e1d23;
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Quicksand", sans-serif;
 }
 
 html {
-   /* scroll-behavior: smooth agar scroll ketika klik pada navigasi menjadi halus */
-   scroll-behavior: smooth;
-}
-
-/* 
-Kode di bawah ini untuk mengatur nav sampai footer agar memiliki tampilan flexibel
-selengkapnya akan di bahas di hari ke 3
-*/
-
-nav,
-header,
-section,
-footer {
-   /* 
-      display: flex memiliki pengaturan yang dapat mengatur agar elemen
-      di dalamnya memiliki ukuran yang fleksibel
-      digunakan saat ada elemen yang isinya lebih dari satu kolom
-   */
-   display: flex;
-   /* 
-      align-items: center mengatur elemen di dalamnya rata tengah vertikal
-   */
-   align-items: center;
-
-   /* 
-      justify-content: center mengatur elemen di dalamnya rata tengah horizontal
-   */
-   justify-content: center;
-
-   /* 
-      flex-wrap: wrap mengatur agar jika lebar elemen berlebih, maka elemen
-      akan otomatis diletakan di baris baru (tidak dipaksakan di satu baris)
-   */
-   flex-wrap: wrap;
-}
-
-
-
-/* 
-Kode @font-face untuk menginstall font ke dalam Website 
-src adalah untuk lokasi fontnya, font dapat di cari di website https://fonts.google.com/
-dengan memberi nama family, maka kita mendaftarkan font tersebut ke dalam website
-*/
-
-@font-face {
-   src: url(../fonts/poppins.woff2);
-   font-family: 'Poppins';
+  scroll-behavior: smooth;
 }
 
 body {
-   /* 
-   mendaftarkan semua teks pada body menjadi family Poppins 
-   kenapa pada body? karena elemen body membungkus semua elemen dari nav section sampai footer
-   */
-   font-family: 'Poppins';
-}
-
-/*
-Misalnya ada font dari google yang bernama Irish Grover yang berada di:
-https://fonts.gstatic.com/s/irishgrover/v23/buExpoi6YtLz2QW7LA4flVgv__RP.woff2
-
-maka bisa coba copy kode berikut untuk menginstall font tadi:
-
-@font-face {
-  font-family: 'Irish Grover';
-  font-style: normal;
+  font-family: var(--primary-font);
+  font-size: 100%;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/irishgrover/v23/buExpoi6YtLz2QW7LA4flVgv__RP.woff2) format('woff2');
 }
 
-Jika kode di atas sudah di copy
-Nanti pada element yang ingin menggunakan font Irish Grover Tadi, tinggal diganti font-familynya
-misal mau mengganti h1 dan h2 maka kodenya sebagai berikut:
+/* ==== custom scrollbar ====*/
 
-h1,h2 {
-   font-family: 'Irish Grover';
+::-webkit-scrollbar {
+  width: 0.625rem;
 }
 
-*/
+::-webkit-scrollbar-track {
+  background: var(--white-color);
+}
 
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
 
-a {
-   /* menghilangkan garis bawah pada link */
-   text-decoration: none;
+/* custom css design */
+h1 {
+  font-size: 58px;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--white-color);
+  text-shadow: 1px 0 6px #000;
+}
 
-   /* 
-   color: adalah untuk mengganti warna tulisan.
-   color:unset digunakan pada a untuk menghilangkan warna bawaan pada link (biasanya warna biru) 
-   */
-   color: unset;
+h1 span {
+  color: var(--primary-color);
 }
 
 h2 {
-   /* mengatur ukuran huruf ke 34 pixel */
-   font-size: 34px;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+  line-height: 3rem;
 }
 
-h3 {
-   /* mengatur ukuran huruf ke 1.2rem */
-   font-size: 1.2rem;
+h4 {
+  color: var(--secondary-color);
+  font-family: var(--secondary-font);
+  text-transform: capitalize;
+  font-size: 1.125rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
 }
 
+h5 {
+  color: var(--black-color);
+  text-transform: capitalize;
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 1px;
+}
+div.olshop img {
+  width: 50px;
+  /* aspect-ratio:1 agar tinggi menyesuaikan width */
+  aspect-ratio: 1;
+  margin-right: 10px;
+}
+.main-btn {
+  display: inline-block;
+  padding: 0.625rem 1.875rem;
+  line-height: 1.5625rem;
+  background-color: var(--primary-color);
+  border: 0.1875rem solid var(--primary-color);
+  color: var(--black-color);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+  -webkit-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+}
+
+.main-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.wrapper {
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+}
+
+.text-content {
+  width: 70%;
+  margin: auto;
+}
+/* ========================= 
+    chat design 
+   =========================    
+*/
+.chat {
+  font-family: inherit;
+  font-size: 15px;
+  background: linear-gradient(to top, #0f0e17 15%, var(--primary-color) 70%);
+  color: white;
+  padding: 0.8em 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  margin-right: 13px;
+}
+
+.chat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.chat:active {
+  transform: scale(0.95);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.chat span {
+  display: block;
+  margin-left: 0.4em;
+  transition: all 0.3s;
+}
+
+.chat svg {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: all 0.3s;
+}
+
+.chat .svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0.5em;
+  transition: all 0.3s;
+}
+
+.chat:hover .svg-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.chat:hover svg {
+  transform: rotate(45deg);
+}
+/* ========================= 
+    header design 
+   =========================    
+*/
+img.img-fluid {
+  /* height mengatur tinggi elemen */
+  height: 120px;
+  /* penjelasan margin mirip dengan padding, fungsinya untuk memberi jarak pada elemen */
+}
+.navigation-wrap {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.navigation-wrap .nav-item {
+  padding: 0 0.625rem;
+  transition: all 0.3s linear;
+}
+
+.navbar-toggler:focus {
+  outline: unset;
+  border: unset;
+  box-shadow: none;
+}
+
+.nav-link {
+  font-size: 0.9375;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--white-color);
+  letter-spacing: 1px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.navigation-wrap .main-btn {
+  padding: 0.3125rem 1.4375rem;
+  box-shadow: none;
+  margin-left: 0.625rem;
+}
+
+/*change navbar styling on scroll*/
+.navigation-wrap.scroll-on {
+  position: fixed;
+  background-color: var(--white-color);
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0.125rem 1.75rem 0 (0, 0, 0, 0, 0.09);
+  transition: all 0.15s ease-in-out 0s;
+}
+
+.navigation-wrap.scroll-on .nav-link {
+  color: var(--black-color);
+}
+
+.navigation-wrap.scroll-on .nav-link:hover,
+.navigation-wrap.scroll-on .nav-link.active {
+  color: var(--primary-color);
+}
+
+/*
+=========================
+top-banner design
+=========================
+*/
+.top-banner {
+  height: 100vh;
+  background-image: url("../images/header/flip_coffe.jpg");
+  background-repeat: no-repeat center;
+  background-size: cover;
+  padding: 16.875rem 0 9.375rem;
+}
+
+.top-banner p {
+  color: var(--white-color);
+}
+
+/*
+========================
+our best seller
+========================
+*/
+section.best-seller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.best-seller h2 {
+  color: var(--secondary-color);
+  font-size: 3rem;
+}
+
+.produk-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.produk {
+  padding: 2rem; /* Mengurangi padding */
+  text-align: center;
+}
+.produk h3 {
+  color: var(--black-color);
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+.price {
+  color: var(--black-color);
+  font-size: 1.5rem;
+  padding-bottom: 1.2rem 0;
+}
+
+.price span {
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+.produk:hover {
+  background: var(--black-color);
+}
+.best-seller .produk-container .produk:hover > * {
+  color: var(--white-color); /* Ganti dengan warna yang Anda inginkan */
+}
+.best-seller .produk-container .produk .btn:hover {
+  color: var(--black-color);
+}
+/*
+========================
+about us
+========================
+*/
+
+#about {
+  padding: 4.25rem 0;
+}
+
+.about-section {
+  background-color: var(--black-color);
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  border: none;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  margin-left: 0;
+}
+
+/* Our Team Section */
+/* Styling for Our Team Section */
+.our-team {
+  background-color: var(
+    --white-color
+  ); /* Ganti warna latar sesuai keinginan Anda */
+  padding: 4rem 0;
+}
+
+.our-team h2 {
+  font-size: 2.5rem;
+  color: var(--secondary-color); /* Ganti warna teks sesuai keinginan Anda */
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.our-team p {
+  font-size: 1.125rem;
+  color: #6c757d; /* Ganti warna teks sesuai keinginan Anda */
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Styling for Bootstrap Card */
+.card {
+  border: none;
+  background-color: transparent; /* Hapus latar belakang kartu Bootstrap */
+}
+
+.card-img-top {
+  border-radius: 50%; /* Membuat gambar bulat */
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #343a40; /* Ganti warna judul sesuai keinginan Anda */
+}
+
+.card-text {
+  font-size: 1.125rem;
+  color: #6c757d; /* Ganti warna teks sesuai keinginan Anda */
+}
+
+/* Styling for Card Container */
+.card-container {
+  margin-bottom: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-container:hover {
+  transform: translateY(-5px); /* Efek hover saat kursor berada di atas kartu */
+}
+
+/* Styling for Review Carousel */
+.review {
+  background-image: url("images/customer/customer1.jpg"); /* Ganti dengan gambar latar belakang yang sesuai */
+  background-size: cover; /* Atur agar gambar latar belakang mencakup seluruh elemen */
+  background-repeat: no-repeat; /* Hindari pengulangan gambar latar belakang */
+  background-attachment: fixed; /* Tetapkan gambar latar belakang agar tidak bergulir bersama konten */
+  color: #fff; /* Warna teks pada latar belakang yang gelap */
+  padding: 4rem 0; /* Ruang internal pada bagian review */
+  text-align: center; /* Pusatkan teks horizontal */
+}
+
+.review h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.review p {
+  font-size: 1rem;
+}
+
+#reviewCarousel {
+  background-color: var(
+    --black-color
+  ); /* Ganti warna latar sesuai keinginan Anda */
+  padding: 4rem 0;
+}
+
+.carousel-inner {
+  text-align: center;
+}
+
+.carousel-item {
+  padding: 2rem; /* Spasi di dalam slide */
+}
+
+.testimoni {
+  background-color: #fff; /* Warna latar belakang slide ulasan */
+  border-radius: 10px; /* Sudut bulat untuk slide ulasan */
+  padding: 1.5rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan slide */
+  max-width: 600px; /* Lebar maksimum slide ulasan */
+  margin: 0 auto; /* Pusatkan slide ulasan di dalam carousel */
+}
+
+.testimoni img {
+  max-width: 100px; /* Ukuran maksimum gambar profil */
+  border-radius: 50%; /* Membuat gambar profil bulat */
+  margin-bottom: 1rem;
+}
+
+.profile h3 {
+  font-size: 1.25rem;
+  color: #343a40; /* Ganti warna judul profil sesuai keinginan Anda */
+}
+
+.profile p {
+  font-size: 0.9375rem;
+  color: #6c757d; /* Ganti warna teks profil sesuai keinginan Anda */
+}
+
+.testimoni p {
+  font-size: 1rem;
+  color: #6c757d; /* Ganti warna teks ulasan sesuai keinginan Anda */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  font-size: 2rem; /* Ukuran panah navigasi carousel */
+  color: #343a40; /* Warna panah navigasi carousel */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: transparent; /* Hapus latar belakang tombol navigasi */
+  border: none; /* Hapus garis batas tombol navigasi */
+  width: auto; /* Lebar tombol navigasi disesuaikan dengan kontennya */
+  padding: 0.5rem; /* Ruang di sekitar tombol navigasi */
+}
+
+/* Gaya untuk menambahkan spasi di antara slide navigasi */
+.carousel-control-prev {
+  margin-left: -2rem;
+}
+
+.carousel-control-next {
+  margin-right: -2rem;
+}
+
+/* Styling for Footer */
+footer {
+  background-color: #343a40; /* Warna latar belakang footer */
+  color: #fff; /* Warna teks pada footer */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer h3 {
+  font-size: 1.5rem; /* Ukuran teks judul */
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+footer p {
+  font-size: 1rem; /* Ukuran teks konten */
+  margin-bottom: 1.5rem;
+}
+
+/* Reset some default margin and padding */
+body,
 h1,
 h2,
-h3 {
-   /* mengatur tebal huruf bisa bold, normal*/
-   font-weight: bold;
+h3,
+p {
+  margin: 0;
+  padding: 0;
 }
 
-img {
-   /* 
-      kode max-width artinya lebar maksimal
-      mengatur agar semua elemen img memiliki lebar maksimal 100% agar
-      besar gambar tidak melebihi layar ataupun elemen pembungkus
-   */
-   max-width: 100%;
-}
-
-/* Navigasi */
-
-nav {
-   /* 
-   background-color mengatur warna latar belakang 
-   untuk pengguna hp, pergantian warna tidak bisa seperti vs code
-   hanya dapat menggunakan warna bahasa inggris seperti: red, green, brown, purple dsb
-   untuk pengguna vscode silahkan arahkan mouse ke kotak warna di bawah
-   untuk mengganti warna sesuai keinginan
-   */
-   background-color: #198754;
-
-   /* box-shadow membuat efek bayangan */
-   box-shadow: 0 3px 7px -2px #000;
-
-   /* width mengatur lebar elemen. 100% agar lebarnya full dari kiri sampai kanan layar */
-   width: 100%;
-
-   /* 
-   padding digunakan untuk memberi jarak ke dalam. 
-   efeknya bila digunakan pada elemen yang memiliki warna latar akan membuat elemen tersebut 'gemuk'
-   padding-top artinya jarak ke atas, nilai padding dapat berupa
-   padding-top, padding-bottom, padding-left, padding-right
-   */
-   padding-top: 10px;
-   padding-bottom: 10px;
-
-   /* 
-   position mengatur posisi elemen, position:fixed supaya elemen nav akan ikut menempel di atas layar
-   saat kita scroll ke bawah. Jika ingin navigasi gak nempel, bisa menggunakan position:static;
-   */
-   position: fixed;
-
-   /* Nilai z-index semakin besar, maka elemen akan semakin di depan */
-   z-index: 500;
-}
-
-img.logo {
-   /* height mengatur tinggi elemen */
-   height: 40px;
-   /* penjelasan margin mirip dengan padding, fungsinya untuk memberi jarak pada elemen */
-   margin-left: 20px;
-}
-
-div.navigasi {
-   margin-left: auto;
-   margin-right: 15px;
-}
-
-nav a {
-   color: #fff;
-   padding-left: 8px;
-   padding-right: 8px;
-}
-
-a.shop {
-   margin-right: 100px;
-}
-
-a.chat {
-   margin-right: 30px;
-   background-color: rgb(8, 69, 8);
-   color: #fff;
-   padding-top: 5px;
-   padding-right: 15px;
-   padding-bottom: 5px;
-   padding-left: 15px;
-   border-radius: 10px;
-}
-
-
-/* 
-   PERHATIKAN bahwa dalam mengatur elemen, nama elemen langsung ditulis
-   sedangkan untuk mengatur class, dibutuhkan tanda titik (.) terlebih dulu
-   img {} berarti seluruh elemen dengan tag img (<img src="....">), 
-   sedangkan .img artinya hanya elemen dengan class img (<img class="img" src="...">) 
-*/
-
-
-/* HEADER */
-
-
-header,
-section {
-   /*
-    padding mengatur jarak ke dalam
-    pada padding dan margin ditambahkan top / right / bottom / top 
-    untuk mengatur jarak masing-masing 
-   */
-   padding-top: 80px;
-   padding-bottom: 80px;
-
-   /* margin mengatur jarak ke luar */
-   margin-bottom: 80px;
-}
-
-/* penulisan CSS dapat digabung dengan beberapa elemen */
-header div.kiri,
-header div.kanan {
-   /* width mengatur lebar elemen. 50% artinya setengah ukuran elemen pembungkus */
-   width: 50%;
-   padding: 50px;
-}
-
-header h1 {
-   margin-bottom: 20px;
-}
-
-header p {
-   /* font-size digunakan untuk mengatur ukuran huruf */
-   font-size: 18px;
-   margin-bottom: 20px;
-}
-
-div.olshop img {
-   width: 40px;
-   /* aspect-ratio:1 agar tinggi menyesuaikan width */
-   aspect-ratio: 1;
-   margin-right: 10px;
-}
-
-/* Best Seller */
-
-section.best-seller {
-   position: relative;
-
-   /* background-color mengatur warna latar belakang elemen */
-   background-color: #EEE6DC;
-
-   /* text-align mengatur rata tulisan, bisa bernilai: left, right, center, justify */
-   text-align: center;
-}
-
-/* 
-terkait position, after, dan before memerlukan pemahaman mendalam
-terkait layout pada CSS untuk dapat memahami secara penuh 
-*/
-
-section.best-seller::before,
-section.best-seller::after {
-   position: absolute;
-   content: "";
-   width: 100%;
-   height: 76px;
-
-   /* background-image untuk menambahkan gambar sebagai background */
-   background-image: url(../images/background/garis-atas.png);
-
-   /*background-size agar gambar latar menyesuaikan tinggi / lebar elemen */
-   background-size: cover;
-
-   top: -60px;
-   left: 0;
-}
-
-section.best-seller::after {
-   height: 60px;
-   background-image: url(../images/background/garis-bawah.png);
-   top: unset;
-   bottom: -60px;
-}
-
-section.best-seller h2 {
-   margin-bottom: 20px;
-   width: 100%;
-}
-
-/* 
-Penulisan section.best-seller > p berarti mengatur elemen p yang langsung
-di bungkus oleh elemen <section class="best-seller">
-aturan ini tidak berlaku untuk elemen <p> yang ada di dalam <div class="produk">
-*/
-
-section.best-seller>p {
-   font-size: 18px;
-   margin-bottom: 40px;
-   width: 100%;
-}
-
-div.produk {
-   /* 
-      Penulisan padding dan margin seperti padding:20px ini penulisan singkat 
-      yang berarti top, right, bottom, left nilainya sama, yaitu 20px 
-   */
-   padding: 20px;
-   width: 25%;
-}
-
-div.produk img {
-   /* transition membuat animasi transisi dari perubahan style, 0.3s berarti 0.3 detik */
-   transition: all 0.3s ease;
-
-   /* border-radius  Membuat sudut membulat */
-   border-radius: 15px;
-
-   /* box-shadow membuat efek bayangan */
-   box-shadow: 0 3px 10px -2px #000;
-}
-
-/*
-
-kode div.produk img:hover akan dijalankan saat mouse ada di atas elemen <img> yang ada
-di dalam <div class="produk"> 
-karena ada efek transition pada div.produk img 
-maka akan menghasilkan efek animasi yang smooth
-
-*/
-div.produk img:hover {
-
-   /* membuat transformasi, bisa berupa scale(1.05), rotate(180deg), translateY(-50px), dsb */
-   transform: scale(0.9);
-   border-radius: 50%;
-}
-
-div.produk p {
-   margin-top: 15px;
-   font-weight: bold;
-}
-
-
-
-/* About US */
-
-section.about-us {
-   /* max-width: 80%; mengatur lebar maksimal elemen tidak boleh melebihi 80% layar */
-   max-width: 80%;
-
-   /* margin-left dan margin-right auto akan membuat posisi elemen berada di tengah */
-   margin-left: auto;
-   margin-right: auto;
-   text-align: center;
-}
-
-section.about-us h2 {
-   margin-bottom: 30px;
-   width: 100%;
-}
-
-section.about-us img {
-   /* 
-      Penulisan width: 800px dan max-width: 100% mengatur agar
-      elemen memiliki lebar 800px namun tidak boleh melebihi 100% ukuran layar
-   */
-   width: 800px;
-   max-width: 100%;
-   margin: auto;
-}
-
-/*
-section.about-us p:nth-child(2) berarti mengatur elemen ke 2 dengan jenis <p>
-yang ada di dalam <section class="about-us">
-*/
-
-section.about-us p:nth-child(2) {
-   margin-bottom: 40px;
-}
-
-section.about-us p:nth-child(4) {
-   margin-top: 40px;
-}
-
-
-/* OUR TEAM */
-
-section.our-team {
-   background-color: #EEE6DC;
-   box-shadow: inset 0px 0px 23px -6px #707070;
-   text-align: center;
-}
-
-section.our-team h2 {
-   margin-bottom: 20px;
-   width: 100%;
-}
-
-section.our-team>p {
-   margin-bottom: 30px;
-   font-size: 18px;
-   width: 800px;
-   max-width: 90%;
-   margin-left: auto;
-   margin-right: auto;
-   width: 100%;
-}
-
-div.team {
-   width: 25%;
-   padding: 20px;
-}
-
-div.team img {
-   width: 100%;
-   aspect-ratio: 1/1;
-   object-fit: cover;
-   box-shadow: 0 3px 10px -2px #000;
-   border-radius: 50px 0px 50px 0px;
-   margin-bottom: 10px;
-}
-
-
-/* REVIEW */
-
-section.review {
-   background-image: url(../images/background/bg-review.svg);
-   /* 
-      background-size: contain;
-      membuat gambar latar belakang tidak terpotong
-   */
-   background-size: contain;
-
-   /* 
-      background-repeat: no-repeat;
-      membuat gambar latar belakang tidak diulang (duplikat)
-   */
-   background-repeat: no-repeat;
-   padding-left: 40px;
-   padding-right: 40px;
-   justify-content: space-around;
-   /* align-items: stretch; membuat tinggi elemen di dalam .review .baris seragam */
-   text-align: center;
-}
-
-section.review h2 {
-   margin-bottom: 20px;
-   width: 100%;
-}
-
-section.review>p {
-   margin-bottom: 40px;
-   font-size: 18px;
-   width: 100%;
-}
-
-div.testimoni {
-   width: 30%;
-   display: flex;
-   flex-wrap: wrap;
-   padding: 35px 50px;
-   box-shadow: 0px 0px 12px -10px #000;
-   background-color: #fff;
-}
-
-div.testimoni img {
-   width: 60px;
-   height: 60px;
-   margin-right: 15px;
-   object-fit: cover;
-}
-
-div.profile {
-   text-align: left;
-   display: block;
-   margin-bottom: 30px;
-   width: calc(100% - 75px);
-}
-
-div.profile p {
-   width: 100%;
-   text-align: left;
-}
-
-div.testimoni>p {
-   width: 100%;
-   text-align: left;
-}
-
-
-/* CONTACT US */
-section.contact-us {
-   margin-bottom: 20px;
-}
-
-section.contact-us iframe {
-   width: 100%;
-   height: 300px;
-   border: 0;
-}
-
-div.kontak {
-   width: 30%;
-   /* color mengatur warna tulisan */
-   color: green;
-   text-align: center;
-   margin-top: 50px;
-}
-
-
-/* FOOTER */
-
+/* Style the footer */
 footer {
-   background-color: #198754;
-   padding-top: 15px;
-   padding-bottom: 15px;
-   color: #fff;
-   padding-right: 40px;
-   padding-left: 40px;
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+  padding: 50px 0; /* Add some padding to top and bottom */
 }
 
-footer div.navigasi {
-   margin-left: 20px;
-   margin-right: auto;
+.container {
+  max-width: 1200px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
 }
 
-footer div.navigasi a {
-   padding: 8px;
+/* Style the About Us section */
+.col-md-6 {
+  width: 50%; /* Take up 50% of the column width */
 }
 
-/* UNTUK kode RESPONSIF hari ke 3 tulis DI BAWAH sini */
-@media(max-width: 600px){
-   .navigasi {
-      display: none;
-   }
-
-   a.shop {
-      margin-right: 20px;
-      margin-left:auto;
-   }
-   header div.kiri,
-   header div.kanan{
-      width: 100px;
-      padding: 25px;
-      text-align: center;
-   }
-   div.team,
-   div.kontak,
-   div.produk{
-      width:50%;
-   }
-   div.testimoni{
-      width: 100%;
-      margin-bottom: 23px;
-   }
+h3 {
+  color: #ffca28; /* Yellow heading color */
 }
 
+/* Style the Google Maps iframe */
+iframe {
+  width: 100%; /* Make the iframe fill its container */
+  height: 300px; /* Set the desired height for the map */
+}
 
-/* Kode CSS Selesai di sini */
+/* Style the Contact Info section */
+.col-md-3 {
+  width: 25%; /* Take up 25% of the column width */
+}
+
+/* Style the address section */
+address {
+  font-size: 16px;
+}
+
+/* Style the copyright text */
+.text-center p {
+  font-size: 14px;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .col-md-6,
+  .col-md-3 {
+    width: 100%; /* Make both columns take up 100% width on smaller screens */
+  }
+}
